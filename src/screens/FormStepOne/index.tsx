@@ -3,6 +3,7 @@ import { styles } from "./styles"
 import { Input } from "../../components/input";
 import { useForm } from "react-hook-form";
 import { useRef } from "react";
+import { Button } from "../../components/Button";
 
 export function FormStepOne() {
     const { control, handleSubmit } = useForm()
@@ -41,6 +42,8 @@ export function FormStepOne() {
 
                 }}
             />
+
+            <Button>Próximo</Button>
 
         </View>
     );
