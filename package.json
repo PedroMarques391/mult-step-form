@@ -1,7 +1,7 @@
 {
   "name": "mult-step-form",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -12,6 +12,7 @@
     "expo": "~53.0.17",
     "expo-status-bar": "~2.2.3",
     "react": "19.0.0",
+    "react-hook-form": "^7.60.0",
     "react-native": "0.79.5"
   },
   "devDependencies": {
