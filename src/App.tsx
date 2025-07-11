@@ -1,9 +1,13 @@
 
+import { AccountFormProvider } from './context/AccountFormContext';
+import { Route } from './routes';
 import { FormStepOne } from './screens/FormStepOne';
 
 export default function App() {
   return (
-    <FormStepOne />
+    <AccountFormProvider>
+      <Route />
+    </AccountFormProvider>
 
   )
 }
