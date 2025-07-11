@@ -1,18 +1,21 @@
 import { KeyboardAvoidingView, Platform, Text, TextInput, View } from "react-native";
-import { styles } from "./styles";
+import { styles } from "../../styles/globals"
+
 import { Input } from "../../components/input";
 import { useForm } from "react-hook-form";
 import { useRef } from "react";
 import { Button } from "../../components/Button";
 import { useNavigation } from "@react-navigation/native";
 import { AccountProps } from "../../context/AccountFormContext";
+import { useAccount } from "../../hooks/useAccount";
 
 export function FormStepTwo() {
     const { control, handleSubmit, formState: { errors } } = useForm<AccountProps>();
+    const { updateFormData } = useAccount()
     const { navigate } = useNavigation();
     const phoneRef = useRef<TextInput>(null);
-
     function handleNextStep(data: AccountProps) {
+        updateFormData(data)
         navigate('stepThree');
     }
 

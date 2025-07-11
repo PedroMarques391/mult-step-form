@@ -1,16 +1,20 @@
 import { KeyboardAvoidingView, Platform, Text, TextInput, View } from "react-native"
-import { styles } from "./styles"
+import { styles } from "../../styles/globals"
+
 import { Input } from "../../components/input";
 import { useForm } from "react-hook-form";
 import { useRef } from "react";
 import { Button } from "../../components/Button";
 import { AccountProps } from "../../context/AccountFormContext";
+import { useAccount } from "../../hooks/useAccount";
 
 export function FormStepThree() {
     const { control, handleSubmit, formState: { errors }, getValues } = useForm<AccountProps>()
+    const { updateFormData } = useAccount()
     const passwordRef = useRef<TextInput>(null)
 
     function handleNextStep(data: AccountProps) {
+        updateFormData(data)
     }
 
     function validationPassword(passwordConfirmation: string) {
