@@ -69,7 +69,7 @@ export function FormStepOne() {
                 error={errors.email?.message!}
             />
 
-            <Button onPress={handleSubmit(handleNextStep)}>Próximo</Button>
+            <Button variant={"multiple-arrows"} onPress={handleSubmit(handleNextStep)} />
 
         </KeyboardAvoidingView>
     );

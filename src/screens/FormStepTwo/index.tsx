@@ -70,7 +70,7 @@ export function FormStepTwo() {
                 error={errors.phone?.message!}
             />
 
-            <Button onPress={handleSubmit(handleNextStep)}>Próximo</Button>
+            <Button variant={"multiple-arrows"} onPress={handleSubmit(handleNextStep)}>Próximo</Button>
         </KeyboardAvoidingView>
     );
 }
