@@ -30,7 +30,7 @@ function AccountFormProvider({ children }: IAccountProvider) {
     const [accountFormData, setAccountFormData] = useState<AccountProps>({} as AccountProps)
 
     function updateFormData(data: AccountProps) {
-        setAccountFormData((prev) => ({ ...prev, data }))
+        setAccountFormData((prev) => ({ ...prev, ...data }))
     }
 
     return (
