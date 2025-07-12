@@ -1,6 +1,5 @@
 import { KeyboardAvoidingView, Platform, Text, TextInput, View } from "react-native";
 import { styles } from "../../styles/globals"
-
 import { Input } from "../../components/input";
 import { useForm } from "react-hook-form";
 import { useRef } from "react";
