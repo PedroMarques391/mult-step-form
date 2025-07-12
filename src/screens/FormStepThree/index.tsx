@@ -8,6 +8,7 @@ import { Button } from "../../components/Button";
 import { AccountProps } from "../../context/AccountFormContext";
 import { useAccount } from "../../hooks/useAccount";
 import { useNavigation } from "@react-navigation/native";
+import { ProgressBar } from "../../components/ProgressBar";
 
 export function FormStepThree() {
     const { control, handleSubmit, formState: { errors }, getValues } = useForm<AccountProps>()
@@ -31,6 +32,8 @@ export function FormStepThree() {
             behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
             style={styles.container}>
             <Text style={styles.title}>Escolha sua Senha</Text>
+            <ProgressBar progress={100} />
+
             <Input
                 icon="lock"
                 formProps={{

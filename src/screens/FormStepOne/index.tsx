@@ -7,6 +7,7 @@ import { Button } from "../../components/Button";
 import { useNavigation } from "@react-navigation/native";
 import { AccountProps } from "../../context/AccountFormContext";
 import { useAccount } from "../../hooks/useAccount";
+import { ProgressBar } from "../../components/ProgressBar";
 
 
 export function FormStepOne() {
@@ -27,6 +28,7 @@ export function FormStepOne() {
             behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
             style={styles.container}>
             <Text style={styles.title}>Criar Conta</Text>
+            <ProgressBar progress={35} />
             <Input
                 icon="user"
                 formProps={{

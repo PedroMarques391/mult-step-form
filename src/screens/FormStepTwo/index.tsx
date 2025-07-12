@@ -7,6 +7,7 @@ import { Button } from "../../components/Button";
 import { useNavigation } from "@react-navigation/native";
 import { AccountProps } from "../../context/AccountFormContext";
 import { useAccount } from "../../hooks/useAccount";
+import { ProgressBar } from "../../components/ProgressBar";
 
 export function FormStepTwo() {
     const { control, handleSubmit, formState: { errors } } = useForm<AccountProps>();
@@ -24,6 +25,7 @@ export function FormStepTwo() {
             style={styles.container}
         >
             <Text style={styles.title}>Seus Dados</Text>
+            <ProgressBar progress={70} />
 
             <Input
                 icon="calendar"
