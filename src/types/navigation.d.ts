@@ -4,6 +4,7 @@ export declare global {
             stepOne: undefined
             stepTwo: undefined
             stepThree: undefined
+            home: undefined
         }
     }
 }
